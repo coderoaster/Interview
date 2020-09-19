@@ -1,26 +1,19 @@
-# RoomChef
-## 개발환경
-![initial](https://user-images.githubusercontent.com/66759107/93365814-3adb2280-f885-11ea-8b6a-90614b2f0c2b.png)
-## 개발 기능 소개
-### FTP를 이용한 이미지 업로드 / 후기작성 
-![initial](https://user-images.githubusercontent.com/66759107/93365908-5cd4a500-f885-11ea-9671-dc2ffde38311.png)
-### FTP를 이용한 이미지 업로드 / 개인정보수정 사진
-![initial](https://user-images.githubusercontent.com/66759107/93366042-93122480-f885-11ea-854b-88dcf63ac7f1.png)
-### 개인정보 수정 비밀번호 / 전화번호 
-![initial](https://user-images.githubusercontent.com/66759107/93366824-a245a200-f886-11ea-8838-380b5d195ead.png)
-### 로그아웃 (자동로그인)
-![initial](https://user-images.githubusercontent.com/66759107/93367464-7bd43680-f887-11ea-9003-0b454ce4c9b6.png)
-### 삭자재 등록 /
-![initial](https://user-images.githubusercontent.com/66759107/93366917-c73a1500-f886-11ea-9ae6-028b2dd73bcd.png)
-### 비회원 기능제한 
-![initial](https://user-images.githubusercontent.com/66759107/93367246-36176e00-f887-11ea-9e27-404b31943e7c.png)
-### 회원가입 
-![initial](https://user-images.githubusercontent.com/66759107/93367602-a625f400-f887-11ea-9b67-d88144573c9d.png)
-### 로그인 비밀번호 찾기
-![initial](https://user-images.githubusercontent.com/66759107/93367352-5b0be100-f887-11ea-8089-964d7ae8b03d.png)
-### 파이썬을 이용한 크롤링
-![initial](https://user-images.githubusercontent.com/66759107/93365424-bd171700-f884-11ea-8224-767961f5e642.png)
-### SMTP를 이용한 이메일 인증
-![initial](https://user-images.githubusercontent.com/66759107/93368971-a1623f80-f889-11ea-9497-0b420bd25a46.png)
-### 메인화면 / Recycle_view , Card_view
-![initial](https://user-images.githubusercontent.com/66759107/93369094-cf478400-f889-11ea-8939-4c1bc6c268f8.png)
+# Akka
+## Akka란 ?
+### Akka는 오픈 소스 툴킷으로, JVM 상의 동시성과 분산 애플리케이션을 단순화하는 런타임이다. Akka는 동시성을 위한 여러 프로그래밍 모델을 지원하지만, Erlang으로부터 영향을 받아 actor 기반의 동시성이 두드러진다.
+### 자바와 스칼라 언어 모두로 작성이 가능하다. Akka는 스칼라 2.10로 작성되었으며, 스칼라 2.10의 Akka의 actor 구현은 스칼라 표준 라이브러리에 포함되어있다.
+
+## Actor
+### 아카는 액터 모델을 구현란 라이브러리이다. 액터를 활용한 고도의 동시성 코드를 작성하는 것을 가능학 해준다.
+### 액터는 '쓰레드' 혹은 '객체'와 구별되는 추상이다. 액터가 차지하는 메모리 공간은 어느 다른 쓰레드 혹은 액터가 접근 할수 없다. 
+### 즉 액터 내부에서 일어나는 일은 공유 되지 않는다.
+
+## 특징
+### Akka actor를 기반으로하는 애플리케이션의 구별되는 특징은 다음과 같다:
+
+### 동시성은 메시지 기반이며 비동기 방식으로 이루어진다: 일반적으로 변형 가능한 데이터를 공유하거나 동기화되는 primitive를 사용해서는 안됩니다: Akka는 액터 모델을 구현한다.
+### 동일한 호스트든 분산된 호스트들이든, 직접 통신하든, 몇몇 혹은 다수의 스레드 상에서 동작하는 라우팅 채널을 이용하여 통신하든, 혹은 이외의 방법으로 통신을 하든 actor들이 상호작용하는 방식은 동일하다. 이러한 세부사항들은 프로그램이 수정 없이 스케일-업(더 성능이 뛰어난 서버를 사용)하거나 스케일-아웃(더 많은 서버를 사용)하기 위해 배포 시점의 구성 메카니즘에 따라 변경할 수 있다.
+### Actor들은 프로그램의 오류를 연관성에 따라 계층적으로 분류한다. 이 오류들은 actor의 supervisor의 이벤트로 처리된다(어느 actor가 오류를 발생했다는 메시지인지를 가리지 않음). 얼랭과는 대조적으로 Akka는 parental supervision을 강조한다. 이는 각 actor가 parent actor에 의해 생성되고 감독받는 것을 의미한다.
+### Akka는 actor를 제공하는 코어 모듈을 포함한 모듈 구조를 띄고 있다. 다른 모듈들은 actor의 네트워크 분산, 클러스터 지원, 명령과 이벤트 소싱, 다양한 서드 파티 시스템과의 통합(예, Apache Camel, ZeroMQ), 심지어 Futures, Agents같은 다른 병렬성 모델을 지원하는 것과 같은 기능을 추가하는 것이 가능하게 한다.
+### 출처 위키백과 Akka
+### https://ko.wikipedia.org/wiki/Akka
