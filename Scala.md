@@ -13,6 +13,7 @@
 
 ## 요약 
 ### Scala언어는 JAVA의 어려운 부분을 보완하고자 만들어진 언어이며 JAVA 가상머신 JVM에서 샐행할수 있다 대부분의 자바 언어와 자바의 API를 사용할수 있다.
+### JVM이 미지원하는 부분에서는 코드가 복잡해지고 성능이 하락한다.
 
 ### Scala나무위키 https://namu.wiki/w/Scala
 ### Scala 위키백과 https://ko.wikipedia.org/wiki/%EC%8A%A4%EC%B9%BC%EB%9D%BC_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)
