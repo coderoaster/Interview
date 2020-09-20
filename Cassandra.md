@@ -1,19 +1,29 @@
-# Scala
-## Scala란?
-### 객체 지향 프로그래밍 언어와 함수형 프로그래밍의 요소가 결합된 다중패러다임 프로그래밍 언어이다.
-### 기존의 Java 언어가 너무 복잡하다는 단점을 극복하기 위해 2004년 Martin Odersky가 처음 개발하여 배포했다. 간결한 소스 코드를 사용하여 Java에서 구현할 수 있는 대부분의 기능을 구현할 수 있다.Scala는 자바 바이트코드를 사용하기 때문에 자바 가상 머신(JVM)에서 실행할 수 있고, Java 언어와 호환되어 대부분의 자바 API를 그대로 사용할 수 있다.
-## 함수형 프로그래밍에 대한 한계
-### 1. JVM이 TCO를 미지원하기 때문에 많은 경우에 트램폴린을 통해 안정성을 확보하지만, 코드가 복잡해지고, 스택이 아니라 힙을 사용하는 이상 캐시미스가 필연적이라 성능이 하락한다.
-### 2. 서브타이핑 지원으로 인해 전역 타입추론이 불가능하고, 지역 타입추론만이 가능하다.
-### 3. 타입클래스 인코딩에 대한 언어 자체적인 내장 기능이 없다.
-### 4. 암묵적인 요소를 많이 사용하면 컴파일 시간이 늘어난다.
-### 5. Haskell보다 타수가 많다.
-### 6. Haskell 등이 지원하는 몇몇 고급 기능을 지원하지 않는다. Kind polymorphism 등.
-### 7. 함수들이 기본적으로 커리잉(Currying)이 된 상태가 아니다.
+# Cassandra
+## Cassandra란?
+### NoSQL 데이터베이스의 한 종류인 Cassnadra는 자바 언어를 통하여 만들어졌으며 Ruby, Perl, Python, Scala, Java, PHP등 다양한 언어들을 지원합니다.
+## 특징
+### Java 기반
+### Column-family(Wide-Column) key-value store
+### 하나의 row는 여러개의 column을 가질 수 있다.
+### 각각의row가 같은 수의 column을 가질 필요는 없다. (Sparse Multidimensional Hash Table)
+### 각 row는 unique key를 가진다. partitioning에 사용됨.
+### Schemaless (Schema-free)
+### 스키마란?
+#### 데이터베이스를 구성하는 개체(Entity), 속성(Attribute), 관계(Relationship) 및 데이터 조작 시에 데이터 값들이 갖는 제약조건 등에 관해 전반적으로 정의하는 것이다.
+#### Schema가 존재한다는 것은 그 구조가 미리 정의되어 있어야 한다는 의미. 이는 데이터의 급격한 변화에 대응하기 힘듬.
+### Cassnadra 는 데이터 구조가 어떤 형태를 가질지, 어떤 fields를 가질지 미리 정의할 필요 없다.
+### 데이터베이스에 저장된 Document는 각기 다른, 다양한 필드를 가질 수 있다.
+### 각 필드는 서로 다른 데이터타입을 가질 수 있다.
+### It actually mean dynamically typed schema.
+### 계속해서 필드의 추가 변경이 이루어지는 경우 유용함.
+### Agile development methodology 에 유용함
+### Unstructured data 를 쉽게 저장할 수 있음
+### 데이터 모델링을 한 다음 복잡한 join 문을 사용해서 쿼리하는 대신, 카산드라는 원하는 쿼리를 모델링한 다음 데이터를 제공하도록 함.
 
-## 요약 
-### Scala언어는 JAVA의 어려운 부분을 보완하고자 만들어진 언어이며 JAVA 가상머신 JVM에서 샐행할수 있다 대부분의 자바 언어와 자바의 API를 사용할수 있다.
-### JVM이 미지원하는 부분에서는 코드가 복잡해지고 성능이 하락한다.
+### CQL(Cassnadra Query Language) - SQL과 비슷한 쿼리 인터페이스
+### CREATE TABLE , INSERT, SELECT 등 거의 유사함.
 
-### Scala나무위키 https://namu.wiki/w/Scala
-### Scala 위키백과 https://ko.wikipedia.org/wiki/%EC%8A%A4%EC%B9%BC%EB%9D%BC_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)
+## 참고 링크
+### 네비어 블로그 https://m.blog.naver.com/PostView.nhn?blogId=gkenq&logNo=10184915909&proxyReferer=https:%2F%2Fwww.google.com%2F
+### 위키백과 https://ko.wikipedia.org/wiki/%EC%95%84%ED%8C%8C%EC%B9%98_%EC%B9%B4%EC%82%B0%EB%93%9C%EB%9D%BC
+### T스토리 블로그 https://notemusic.tistory.com/58
